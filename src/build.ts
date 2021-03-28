@@ -111,7 +111,7 @@ services:${isGanache ? ganacheService : ''}
     ports:
       - '3000:3000'
   mesh:
-    image: 0xorg/mesh:9.0.1
+    build: ../0x-mesh/dockerfiles/mesh
     restart: always
     environment:
         ETHEREUM_RPC_URL: '${options.rpcUrl}'
